@@ -16,6 +16,12 @@ export class User{
         private turma_id: string
         
         ){
+            this.id = id
+            this.nome = nome
+            this.email = email
+            this.data_nasceu = data_nasceu
+            this.turma_id = turma_id
+        }
             public getId(){
                 return this.id
             }
@@ -35,5 +41,5 @@ export class User{
             public geTurmaId(){
                 return this.turma_id
             }
-        }
+        
 }

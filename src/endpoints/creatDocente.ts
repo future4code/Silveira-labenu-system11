@@ -1,6 +1,6 @@
 
-import BaseDataBase from "./BaseDataBase"
-import Docente from "./Docentes";
+import BaseDataBase from "../data/BaseDataBase"
+import Docente from "../data/Docentes";
 
 const table: string = "Docente"
 export default class creatDocente extends BaseDataBase {
@@ -9,18 +9,15 @@ async insertDocent(Docente:Docente): Promise<void>{
 
     await this.getConnection()
     .insert({
-        id: Docente.getId(),
+        id: Docente.getIdDocente(),
         nome: Docente.getNome(),
         email: Docente.getEmail(),
         data_nasceu: Docente.getDataNasceu(),
-        turma_id: Docente.geTurmaId(),
+        turma_id: Docente.getIdTurma(),
         especialidades: Docente.getEspecialidades()
     }).into(table)
    
 
 }
-    
-
-
 
 }

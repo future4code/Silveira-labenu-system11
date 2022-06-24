@@ -4,7 +4,7 @@ import { Especialidades } from "../Model/Especialidades";
 
 
 
-export class Docente extends User{
+class Docente extends User{
 
     private especialidades: Especialidades[] = [];
 
@@ -15,17 +15,21 @@ export class Docente extends User{
         email: string,
         data_nasceu: string,
         turma_id: string,
-        especiallidades: Especialidades[]
+        especialiadades: Especialidades[]
     ){
         super(id, nome, email, data_nasceu, turma_id);
         console.log("Confirmando cadastro");
-        this.especialidades = especiallidades;
+        this.especialidades = especialiadades;
+
     }
 
 
     public getEspecialidades(): Especialidades[]{
         return this.especialidades
     }
+    
+ 
 
 }
 
+export default Docente

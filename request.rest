@@ -1,0 +1,13 @@
+
+
+POST http://localhost:3005/docente
+Content-Type: application/json
+
+{
+    "id": "1",
+    "nome": "tata" ,
+    "email": "tatata@hotmail.com" ,
+    "data_nasceu": "23/12/1985", 
+    "turma_id": "1", 
+    "especiallidades": "JS"
+}

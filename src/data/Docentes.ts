@@ -13,16 +13,16 @@ class Docente{
     public id_turma
 
     constructor(
-        id_docente: string,
+        id_docente: number,
         nome: string,
         email: string,
         data_nasceu: Date,
         id_turma: number,
-        especialiadades: Especialidades[]
+        especialidades: Especialidades[]
     ){
        
         console.log("Confirmando cadastro");
-        this.especialidades = especialiadades;
+        this.especialidades = especialidades;
         this.id_docente = id_docente;
         this.nome = nome;
         this.email = email;
@@ -34,7 +34,7 @@ class Docente{
     public getEspecialidades(): Especialidades[]{
         return this.especialidades
     };
-    public getIdDocente():string{
+    public getIdDocente():number{
         return this.id_docente
     };
     public getIdTurma():number{

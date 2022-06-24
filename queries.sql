@@ -1,0 +1,1 @@
+UPDATE Docente inner JOIN Especialidades on Especialidades.nome = Docente.especialidades;

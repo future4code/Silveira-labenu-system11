@@ -1,5 +1,6 @@
 import {Request, Response} from "express"
 import Docente from "../data/Docentes"
+import baseDocente from "../data/baseDocente"
 
 class Controller {
 
@@ -8,23 +9,32 @@ async createDocente(request:Request, response:Response){
 
     try {
         
-        const{id, nome, email, data_nasceu, turma_id, especiallidades} = request.body
+        const{id_docente, nome, email, data_nasceu, id_turma, especialidades} = request.body
 
-        if(!id || !nome || !email || !data_nasceu || !turma_id || especiallidades){
+        if(!id_docente || !nome || !email || !data_nasceu || !id_turma || especialidades){
 
             throw new Error("todos os campos devem ser preenchidos")
 
         }
 
-        const docente = new Docente(id, nome, email, data_nasceu, turma_id, especiallidades)
+        const docente = new Docente(id_docente, nome, email, data_nasceu, id_turma, especialidades)
+        const basedocente = new baseDocente()
+
         
-        
-        console.log("Criado", docente)
+        console.log("Criado", docente, basedocente)
 
     } catch (error:any) {
         response.status(500).end()
     }
 }
+
+
+
+
+
+
+
+
  }
 
 export default Controller

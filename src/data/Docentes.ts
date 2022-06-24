@@ -1,6 +1,6 @@
 
 import { User } from "./User";
-import { Especialidades } from "../Modal/Especialidades";
+import { Especialidades } from "../Model/Especialidades";
 
 
 
